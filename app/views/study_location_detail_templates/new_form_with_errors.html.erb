@@ -39,7 +39,7 @@
     </label>
 
     <!-- Input for noise_level_id start -->
-    <input type="text" id="noise_level_id" name="noise_level_id" class="form-control" value="<%= @study_location_detail.noise_level_id %>">
+    <%= select_tag(:noise_level_id, options_from_collection_for_select(NoiseLevel.all, :id, :level, @study_location_detail.noise_level_id), :class => "form-control") %>
     <!-- Input for noise_level_id end -->
   </div>
   <!-- Label and input for noise_level_id end -->
