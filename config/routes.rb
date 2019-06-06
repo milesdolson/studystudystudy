@@ -1,4 +1,23 @@
 Rails.application.routes.draw do
+  # Routes for the Ambience resource:
+
+  # CREATE
+  get("/ambiences/new", { :controller => "ambiences", :action => "new_form" })
+  post("/create_ambience", { :controller => "ambiences", :action => "create_row" })
+
+  # READ
+  get("/ambiences", { :controller => "ambiences", :action => "index" })
+  get("/ambiences/:id_to_display", { :controller => "ambiences", :action => "show" })
+
+  # UPDATE
+  get("/ambiences/:prefill_with_id/edit", { :controller => "ambiences", :action => "edit_form" })
+  post("/update_ambience/:id_to_modify", { :controller => "ambiences", :action => "update_row" })
+
+  # DELETE
+  get("/delete_ambience/:id_to_remove", { :controller => "ambiences", :action => "destroy_row" })
+
+  #------------------------------
+
   # Routes for the Location resource:
 
   # CREATE

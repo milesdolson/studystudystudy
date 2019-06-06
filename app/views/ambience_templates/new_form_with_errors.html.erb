@@ -1,0 +1,44 @@
+<!-- Validation failure messages -->
+<% if @ambience.present? %>
+  <% if @ambience.errors.any? %>
+    <% @ambience.errors.full_messages.each do |message| %>
+      <div class="alert alert-danger">
+        <%= message %>
+      </div>
+    <% end %>
+  <% end %>
+<% end %>
+
+<h1>
+  Add a new ambience
+</h1>
+
+
+<hr>
+
+<!-- Form ambience start -->
+<form action="/create_ambience" method="post">
+<!-- Form ambience end -->
+
+  <!-- Label and input for description start -->
+  <div class="form-group">
+    <label for="description">
+      Description
+    </label>
+
+    <!-- Input for description start -->
+    <input type="text" id="description" name="description" class="form-control" value="<%= @ambience.description %>">
+    <!-- Input for description end -->
+  </div>
+  <!-- Label and input for description end -->
+
+  <button class="btn btn-block btn-outline-secondary">
+    Create ambience
+  </button>
+</form>
+
+<hr>
+
+<a href="/ambiences">
+  Go back
+</a>
