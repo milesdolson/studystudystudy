@@ -1,6 +1,6 @@
 class PlugAvailabilitiesController < ApplicationController
   def index
-    @plug_availabilities = PlugAvailability.all
+    @plug_availabilities = PlugAvailability.page(params[:page]).per(10)
 
     render("plug_availability_templates/index.html.erb")
   end

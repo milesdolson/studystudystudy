@@ -1,6 +1,6 @@
 class InternetQualitiesController < ApplicationController
   def index
-    @internet_qualities = InternetQuality.all
+    @internet_qualities = InternetQuality.page(params[:page]).per(10)
 
     render("internet_quality_templates/index.html.erb")
   end

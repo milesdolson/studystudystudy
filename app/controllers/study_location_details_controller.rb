@@ -10,7 +10,7 @@ class StudyLocationDetailsController < ApplicationController
   end
 
   def index
-    @study_location_details = StudyLocationDetail.all
+    @study_location_details = StudyLocationDetail.page(params[:page]).per(10)
 
     render("study_location_detail_templates/index.html.erb")
   end

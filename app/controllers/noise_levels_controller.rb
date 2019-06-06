@@ -1,6 +1,6 @@
 class NoiseLevelsController < ApplicationController
   def index
-    @noise_levels = NoiseLevel.all
+    @noise_levels = NoiseLevel.page(params[:page]).per(10)
 
     render("noise_level_templates/index.html.erb")
   end

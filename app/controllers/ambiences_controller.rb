@@ -1,6 +1,6 @@
 class AmbiencesController < ApplicationController
   def index
-    @ambiences = Ambience.all
+    @ambiences = Ambience.page(params[:page]).per(10)
 
     render("ambience_templates/index.html.erb")
   end
