@@ -74,37 +74,61 @@
 
         <!-- Display study_location_detail.ambience_id start -->
         <td>
-          <%= study_location_detail.ambience.description %>
+          <% if study_location_detail.ambience.present? %>
+            <a href="/ambiences/<%= study_location_detail.ambience.id %>">
+              <%= study_location_detail.ambience.description %>
+            </a>
+          <% end %>
         </td>
         <!-- Display study_location_detail.ambience_id end -->
 
         <!-- Display study_location_detail.noise_level_id start -->
         <td>
-          <%= study_location_detail.noise_level.level %>
+          <% if study_location_detail.noise_level.present? %>
+            <a href="/noise_levels/<%= study_location_detail.noise_level.id %>">
+              <%= study_location_detail.noise_level.level %>
+            </a>
+          <% end %>
         </td>
         <!-- Display study_location_detail.noise_level_id end -->
 
         <!-- Display study_location_detail.internet_quality_id start -->
         <td>
-          <%= study_location_detail.internet_quality.quality %>
+          <% if study_location_detail.internet_quality.present? %>
+            <a href="/internet_qualities/<%= study_location_detail.internet_quality.id %>">
+              <%= study_location_detail.internet_quality.quality %>
+            </a>
+          <% end %>
         </td>
         <!-- Display study_location_detail.internet_quality_id end -->
 
         <!-- Display study_location_detail.plug_availability_id start -->
         <td>
-          <%= study_location_detail.plug_availability.availability %>
+          <% if study_location_detail.plug_availability.present? %>
+            <a href="/plug_availabilities/<%= study_location_detail.plug_availability.id %>">
+              <%= study_location_detail.plug_availability.availability %>
+            </a>
+          <% end %>
         </td>
         <!-- Display study_location_detail.plug_availability_id end -->
 
         <!-- Display study_location_detail.location_id start -->
         <td>
-          <%= study_location_detail.location.name %>
+          <% if study_location_detail.location.present? %>
+            <a href="/locations/<%= study_location_detail.location.id %>">
+              <%= study_location_detail.location.name %>
+            </a>
+          <% end %>
         </td>
         <!-- Display study_location_detail.location_id end -->
 
         <!-- Display study_location_detail.user_id start -->
         <td>
-          <%= study_location_detail.user.email %>
+          <% if study_location_detail.user.present? %>
+            <a href="/users/<%= study_location_detail.user.id %>">
+              <%= study_location_detail.user.email %>
+            </a>
+          <% end %>
         </td>
         <!-- Display study_location_detail.user_id end -->
 

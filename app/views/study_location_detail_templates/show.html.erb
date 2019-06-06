@@ -38,7 +38,11 @@
       </dt>
       <!-- Display ambience_id start -->
       <dd>
-        <%= @study_location_detail.ambience_id %>
+        <% if @study_location_detail.ambience.present? %>
+          <a href="/ambiences/<%= @study_location_detail.ambience_id %>">
+            <%= @study_location_detail.ambience.description %>
+          </a>
+        <% end %>
       </dd>
       <!-- Display ambience_id end -->
 
@@ -47,7 +51,11 @@
       </dt>
       <!-- Display noise_level_id start -->
       <dd>
-        <%= @study_location_detail.noise_level_id %>
+        <% if @study_location_detail.noise_level.present? %>
+          <a href="/noise_levels/<%= @study_location_detail.noise_level_id %>">
+            <%= @study_location_detail.noise_level.level %>
+          </a>
+        <% end %>
       </dd>
       <!-- Display noise_level_id end -->
 
@@ -56,7 +64,11 @@
       </dt>
       <!-- Display internet_quality_id start -->
       <dd>
-        <%= @study_location_detail.internet_quality_id %>
+        <% if @study_location_detail.internet_quality.present? %>
+          <a href="/internet_qualities/<%= @study_location_detail.internet_quality_id %>">
+            <%= @study_location_detail.internet_quality.quality %>
+          </a>
+        <% end %>
       </dd>
       <!-- Display internet_quality_id end -->
 
@@ -65,7 +77,11 @@
       </dt>
       <!-- Display plug_availability_id start -->
       <dd>
-        <%= @study_location_detail.plug_availability_id %>
+        <% if @study_location_detail.plug_availability.present? %>
+          <a href="/plug_availabilities/<%= @study_location_detail.plug_availability_id %>">
+            <%= @study_location_detail.plug_availability.availability %>
+          </a>
+        <% end %>
       </dd>
       <!-- Display plug_availability_id end -->
 
@@ -74,7 +90,11 @@
       </dt>
       <!-- Display location_id start -->
       <dd>
-        <%= @study_location_detail.location_id %>
+        <% if @study_location_detail.location.present? %>
+          <a href="/locations/<%= @study_location_detail.location_id %>">
+            <%= @study_location_detail.location.name %>
+          </a>
+        <% end %>
       </dd>
       <!-- Display location_id end -->
 
@@ -83,7 +103,11 @@
       </dt>
       <!-- Display user_id start -->
       <dd>
-        <%= @study_location_detail.user_id %>
+        <% if @study_location_detail.user.present? %>
+          <a href="/users/<%= @study_location_detail.user_id %>">
+            <%= @study_location_detail.user.email %>
+          </a>
+        <% end %>
       </dd>
       <!-- Display user_id end -->
 

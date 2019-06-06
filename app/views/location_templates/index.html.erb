@@ -64,7 +64,11 @@
 
         <!-- Display location.address_id start -->
         <td>
-          <%= location.address.street_number %>
+          <% if location.address.present? %>
+            <a href="/addresses/<%= location.address.id %>">
+              <%= location.address.street_number %>
+            </a>
+          <% end %>
         </td>
         <!-- Display location.address_id end -->
 

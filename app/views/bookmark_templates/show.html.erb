@@ -34,7 +34,11 @@
       </dt>
       <!-- Display study_location_id start -->
       <dd>
-        <%= @bookmark.study_location_id %>
+        <% if @bookmark.study_location.present? %>
+          <a href="/study_location_details/<%= @bookmark.study_location_id %>">
+            <%= @bookmark.study_location.created_at %>
+          </a>
+        <% end %>
       </dd>
       <!-- Display study_location_id end -->
 
@@ -43,7 +47,11 @@
       </dt>
       <!-- Display category_id start -->
       <dd>
-        <%= @bookmark.category_id %>
+        <% if @bookmark.category.present? %>
+          <a href="/categories/<%= @bookmark.category_id %>">
+            <%= @bookmark.category.category %>
+          </a>
+        <% end %>
       </dd>
       <!-- Display category_id end -->
 

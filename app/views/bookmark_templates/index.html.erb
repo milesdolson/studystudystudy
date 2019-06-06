@@ -58,13 +58,21 @@
 
         <!-- Display bookmark.study_location_id start -->
         <td>
-          <%= bookmark.study_location.created_at %>
+          <% if bookmark.study_location.present? %>
+            <a href="/study_location_details/<%= bookmark.study_location.id %>">
+              <%= bookmark.study_location.created_at %>
+            </a>
+          <% end %>
         </td>
         <!-- Display bookmark.study_location_id end -->
 
         <!-- Display bookmark.category_id start -->
         <td>
-          <%= bookmark.category.category %>
+          <% if bookmark.category.present? %>
+            <a href="/categories/<%= bookmark.category.id %>">
+              <%= bookmark.category.category %>
+            </a>
+          <% end %>
         </td>
         <!-- Display bookmark.category_id end -->
 

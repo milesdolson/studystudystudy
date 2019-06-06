@@ -43,7 +43,11 @@
       </dt>
       <!-- Display address_id start -->
       <dd>
-        <%= @location.address_id %>
+        <% if @location.address.present? %>
+          <a href="/addresses/<%= @location.address_id %>">
+            <%= @location.address.street_number %>
+          </a>
+        <% end %>
       </dd>
       <!-- Display address_id end -->
 
