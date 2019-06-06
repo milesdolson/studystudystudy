@@ -1,4 +1,23 @@
 Rails.application.routes.draw do
+  # Routes for the Plug availability resource:
+
+  # CREATE
+  get("/plug_availabilities/new", { :controller => "plug_availabilities", :action => "new_form" })
+  post("/create_plug_availability", { :controller => "plug_availabilities", :action => "create_row" })
+
+  # READ
+  get("/plug_availabilities", { :controller => "plug_availabilities", :action => "index" })
+  get("/plug_availabilities/:id_to_display", { :controller => "plug_availabilities", :action => "show" })
+
+  # UPDATE
+  get("/plug_availabilities/:prefill_with_id/edit", { :controller => "plug_availabilities", :action => "edit_form" })
+  post("/update_plug_availability/:id_to_modify", { :controller => "plug_availabilities", :action => "update_row" })
+
+  # DELETE
+  get("/delete_plug_availability/:id_to_remove", { :controller => "plug_availabilities", :action => "destroy_row" })
+
+  #------------------------------
+
   # Routes for the Internet quality resource:
 
   # CREATE

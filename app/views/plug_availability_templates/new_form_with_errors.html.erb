@@ -1,0 +1,44 @@
+<!-- Validation failure messages -->
+<% if @plug_availability.present? %>
+  <% if @plug_availability.errors.any? %>
+    <% @plug_availability.errors.full_messages.each do |message| %>
+      <div class="alert alert-danger">
+        <%= message %>
+      </div>
+    <% end %>
+  <% end %>
+<% end %>
+
+<h1>
+  Add a new plug availability
+</h1>
+
+
+<hr>
+
+<!-- Form plug_availability start -->
+<form action="/create_plug_availability" method="post">
+<!-- Form plug_availability end -->
+
+  <!-- Label and input for availability start -->
+  <div class="form-group">
+    <label for="availability">
+      Availability
+    </label>
+
+    <!-- Input for availability start -->
+    <input type="text" id="availability" name="availability" class="form-control" value="<%= @plug_availability.availability %>">
+    <!-- Input for availability end -->
+  </div>
+  <!-- Label and input for availability end -->
+
+  <button class="btn btn-block btn-outline-secondary">
+    Create plug availability
+  </button>
+</form>
+
+<hr>
+
+<a href="/plug_availabilities">
+  Go back
+</a>
