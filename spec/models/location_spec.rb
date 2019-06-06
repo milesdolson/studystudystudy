@@ -4,6 +4,8 @@ RSpec.describe Location, type: :model do
   
     describe "Direct Associations" do
 
+    it { should belong_to(:address) }
+
     it { should have_many(:study_location_details) }
 
     end
