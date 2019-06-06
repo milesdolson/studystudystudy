@@ -146,7 +146,7 @@ class StudyLocationDetailsController < ApplicationController
     @study_location_detail.internet_quality_id = params.fetch("internet_quality_id")
     @study_location_detail.plug_availability_id = params.fetch("plug_availability_id")
     @study_location_detail.location_id = params.fetch("location_id")
-    @study_location_detail.user_id = params.fetch("user_id")
+    
 
     if @study_location_detail.valid?
       @study_location_detail.save
