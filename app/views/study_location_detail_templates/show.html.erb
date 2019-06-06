@@ -1,0 +1,109 @@
+<div class="row mb-3">
+  <div class="col-md-8 offset-md-2">
+    <h1>
+      Study location detail #<%= @study_location_detail.id %> details
+    </h1>
+
+    <div class="row mb-3">
+      <div class="col">
+        <a href="/study_location_details" class="btn btn-block btn-outline-secondary">
+          Go back
+        </a>
+      </div>
+
+      <!-- Edit link study_location_detail start -->
+      <div class="col">
+        <a href="/study_location_details/<%= @study_location_detail.id %>/edit" class="btn btn-block btn-outline-secondary">
+          Edit study location detail
+        </a>
+      </div>
+      <!-- Edit link study_location_detail end -->
+
+      <!-- Delete link study_location_detail start -->
+      <div class="col">
+        <a href="/delete_study_location_detail/<%= @study_location_detail.id %>" class="btn btn-block btn-outline-secondary">
+          Delete study location detail
+        </a>
+      </div>
+      <!-- Delete link study_location_detail end -->
+    </div>
+
+    <dl>
+      <dt>
+        Ambience
+      </dt>
+      <!-- Display ambience_id start -->
+      <dd>
+        <%= @study_location_detail.ambience_id %>
+      </dd>
+      <!-- Display ambience_id end -->
+
+      <dt>
+        Noise level
+      </dt>
+      <!-- Display noise_level_id start -->
+      <dd>
+        <%= @study_location_detail.noise_level_id %>
+      </dd>
+      <!-- Display noise_level_id end -->
+
+      <dt>
+        Internet quality
+      </dt>
+      <!-- Display internet_quality_id start -->
+      <dd>
+        <%= @study_location_detail.internet_quality_id %>
+      </dd>
+      <!-- Display internet_quality_id end -->
+
+      <dt>
+        Plug availability
+      </dt>
+      <!-- Display plug_availability_id start -->
+      <dd>
+        <%= @study_location_detail.plug_availability_id %>
+      </dd>
+      <!-- Display plug_availability_id end -->
+
+      <dt>
+        Location
+      </dt>
+      <!-- Display location_id start -->
+      <dd>
+        <%= @study_location_detail.location_id %>
+      </dd>
+      <!-- Display location_id end -->
+
+      <dt>
+        User
+      </dt>
+      <!-- Display user_id start -->
+      <dd>
+        <%= @study_location_detail.user_id %>
+      </dd>
+      <!-- Display user_id end -->
+
+      <dt>
+        Created at
+      </dt>
+      <!-- Display created_at start -->
+      <dd>
+        <%= time_ago_in_words(@study_location_detail.created_at) %> ago
+      </dd>
+      <!-- Display created_at end -->
+
+      <dt>
+        Updated at
+      </dt>
+      <!-- Display updated_at start -->
+      <dd>
+        <%= time_ago_in_words(@study_location_detail.updated_at) %> ago
+      </dd>
+      <!-- Display updated_at end -->
+    </dl>
+  </div>
+</div>
+
+<!-- Show Page Customization starts -->
+
+<!-- Show Page Customization end -->
