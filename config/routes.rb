@@ -37,6 +37,8 @@ Rails.application.routes.draw do
 
   # DELETE
   get("/delete_bookmark/:id_to_remove", { :controller => "bookmarks", :action => "destroy_row" })
+  get("/delete_bookmark_from_category/:id_to_remove", { :controller => "bookmarks", :action => "destroy_row_from_category" })
+  get("/delete_bookmark_from_study_location/:id_to_remove", { :controller => "bookmarks", :action => "destroy_row_from_study_location" })
 
   #------------------------------
 
@@ -151,6 +153,7 @@ Rails.application.routes.draw do
 
   # DELETE
   get("/delete_location/:id_to_remove", { :controller => "locations", :action => "destroy_row" })
+  get("/delete_location_from_address/:id_to_remove", { :controller => "locations", :action => "destroy_row_from_address" })
 
   #------------------------------
 
@@ -170,6 +173,12 @@ Rails.application.routes.draw do
 
   # DELETE
   get("/delete_study_location_detail/:id_to_remove", { :controller => "study_location_details", :action => "destroy_row" })
+  get("/delete_study_location_detail_from_plug_availability/:id_to_remove", { :controller => "study_location_details", :action => "destroy_row_from_plug_availability" })
+  get("/delete_study_location_detail_from_internet_quality/:id_to_remove", { :controller => "study_location_details", :action => "destroy_row_from_internet_quality" })
+  get("/delete_study_location_detail_from_noise_level/:id_to_remove", { :controller => "study_location_details", :action => "destroy_row_from_noise_level" })
+  get("/delete_study_location_detail_from_ambience/:id_to_remove", { :controller => "study_location_details", :action => "destroy_row_from_ambience" })
+  get("/delete_study_location_detail_from_location/:id_to_remove", { :controller => "study_location_details", :action => "destroy_row_from_location" })
+  get("/delete_study_location_detail_from_user/:id_to_remove", { :controller => "study_location_details", :action => "destroy_row_from_user" })
 
   #------------------------------
 

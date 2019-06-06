@@ -1,0 +1,23 @@
+<div class="card">
+  <div class="card-header d-flex align-items-center justify-content-between">
+    Study Location Details
+
+    <a data-toggle="collapse" href="#user_study_location_details_new_form">
+      Add study location detail
+    </a>
+  </div>
+
+  <ul class="list-group list-group-flush">
+    <% @user.study_location_details.each do |study_location_detail| %>
+      <li class="list-group-item d-flex align-items-center justify-content-between">
+        <!-- Show link start -->
+        <a href="/study_location_details/<%= study_location_detail.id %>">
+          <%= study_location_detail.created_at %>
+        </a>
+        <!-- Show link end -->
+
+      </li>
+    <% end %>
+
+  </ul>
+</div>

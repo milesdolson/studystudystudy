@@ -61,6 +61,54 @@ class StudyLocationDetailsController < ApplicationController
     end
   end
 
+  def destroy_row_from_user
+    @study_location_detail = StudyLocationDetail.find(params.fetch("id_to_remove"))
+
+    @study_location_detail.destroy
+
+    redirect_to("/users/#{@study_location_detail.user_id}", notice: "StudyLocationDetail deleted successfully.")
+  end
+
+  def destroy_row_from_location
+    @study_location_detail = StudyLocationDetail.find(params.fetch("id_to_remove"))
+
+    @study_location_detail.destroy
+
+    redirect_to("/locations/#{@study_location_detail.location_id}", notice: "StudyLocationDetail deleted successfully.")
+  end
+
+  def destroy_row_from_ambience
+    @study_location_detail = StudyLocationDetail.find(params.fetch("id_to_remove"))
+
+    @study_location_detail.destroy
+
+    redirect_to("/ambiences/#{@study_location_detail.ambience_id}", notice: "StudyLocationDetail deleted successfully.")
+  end
+
+  def destroy_row_from_noise_level
+    @study_location_detail = StudyLocationDetail.find(params.fetch("id_to_remove"))
+
+    @study_location_detail.destroy
+
+    redirect_to("/noise_levels/#{@study_location_detail.noise_level_id}", notice: "StudyLocationDetail deleted successfully.")
+  end
+
+  def destroy_row_from_internet_quality
+    @study_location_detail = StudyLocationDetail.find(params.fetch("id_to_remove"))
+
+    @study_location_detail.destroy
+
+    redirect_to("/internet_qualities/#{@study_location_detail.internet_quality_id}", notice: "StudyLocationDetail deleted successfully.")
+  end
+
+  def destroy_row_from_plug_availability
+    @study_location_detail = StudyLocationDetail.find(params.fetch("id_to_remove"))
+
+    @study_location_detail.destroy
+
+    redirect_to("/plug_availabilities/#{@study_location_detail.plug_availability_id}", notice: "StudyLocationDetail deleted successfully.")
+  end
+
   def destroy_row
     @study_location_detail = StudyLocationDetail.find(params.fetch("id_to_remove"))
 
