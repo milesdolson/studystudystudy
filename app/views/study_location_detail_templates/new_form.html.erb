@@ -40,7 +40,7 @@
     </label>
 
     <!-- Input for internet_quality_id start -->
-    <input type="text" id="internet_quality_id" name="internet_quality_id" class="form-control">
+    <%= select_tag(:internet_quality_id, options_from_collection_for_select(InternetQuality.all, :id, :quality, @study_location_detail.internet_quality_id), :class => "form-control") %>
     <!-- Input for internet_quality_id end -->
   </div>
   <!-- Label and input for internet_quality_id end -->
