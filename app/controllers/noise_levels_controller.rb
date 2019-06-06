@@ -1,6 +1,7 @@
 class NoiseLevelsController < ApplicationController
   def index
-    @noise_levels = NoiseLevel.page(params[:page]).per(10)
+    @q = NoiseLevel.ransack(params[:q])
+    @noise_levels = @q.result(:distinct => true).includes(:study_location_details).page(params[:page]).per(10)
 
     render("noise_level_templates/index.html.erb")
   end

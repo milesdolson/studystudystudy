@@ -1,6 +1,7 @@
 class PlugAvailabilitiesController < ApplicationController
   def index
-    @plug_availabilities = PlugAvailability.page(params[:page]).per(10)
+    @q = PlugAvailability.ransack(params[:q])
+    @plug_availabilities = @q.result(:distinct => true).includes(:study_location_details).page(params[:page]).per(10)
 
     render("plug_availability_templates/index.html.erb")
   end

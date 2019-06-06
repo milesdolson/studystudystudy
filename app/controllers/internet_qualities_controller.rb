@@ -1,6 +1,7 @@
 class InternetQualitiesController < ApplicationController
   def index
-    @internet_qualities = InternetQuality.page(params[:page]).per(10)
+    @q = InternetQuality.ransack(params[:q])
+    @internet_qualities = @q.result(:distinct => true).includes(:study_location_details).page(params[:page]).per(10)
 
     render("internet_quality_templates/index.html.erb")
   end

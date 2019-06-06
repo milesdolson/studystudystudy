@@ -1,6 +1,7 @@
 class AmbiencesController < ApplicationController
   def index
-    @ambiences = Ambience.page(params[:page]).per(10)
+    @q = Ambience.ransack(params[:q])
+    @ambiences = @q.result(:distinct => true).includes(:study_location_details).page(params[:page]).per(10)
 
     render("ambience_templates/index.html.erb")
   end

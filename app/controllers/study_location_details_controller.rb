@@ -10,7 +10,8 @@ class StudyLocationDetailsController < ApplicationController
   end
 
   def index
-    @study_location_details = StudyLocationDetail.page(params[:page]).per(10)
+    @q = StudyLocationDetail.ransack(params[:q])
+    @study_location_details = @q.result(:distinct => true).includes(:user, :favorites, :location, :ambience, :noise_level, :internet_quality, :plug_availability).page(params[:page]).per(10)
 
     render("study_location_detail_templates/index.html.erb")
   end
