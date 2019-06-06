@@ -1,0 +1,92 @@
+<h1>
+  Edit address #<%= @address.id %>
+</h1>
+
+<hr>
+
+<!-- Form address start -->
+<form action="/update_address/<%= @address.id %>" method="post">
+<!-- Form address end -->
+
+  <!-- Label and input for street_number start -->
+  <div class="form-group">
+    <label for="street_number">
+      Street number
+    </label>
+
+    <!-- Input for street_number start -->
+    <input type="text" id="street_number" name="street_number" class="form-control" value="<%= @address.street_number %>">
+    <!-- Input for street_number end -->
+  </div>
+  <!-- Label and input for street_number end -->
+
+  <!-- Label and input for street start -->
+  <div class="form-group">
+    <label for="street">
+      Street
+    </label>
+
+    <!-- Input for street start -->
+    <input type="text" id="street" name="street" class="form-control" value="<%= @address.street %>">
+    <!-- Input for street end -->
+  </div>
+  <!-- Label and input for street end -->
+
+  <!-- Label and input for city start -->
+  <div class="form-group">
+    <label for="city">
+      City
+    </label>
+
+    <!-- Input for city start -->
+    <input type="text" id="city" name="city" class="form-control" value="<%= @address.city %>">
+    <!-- Input for city end -->
+  </div>
+  <!-- Label and input for city end -->
+
+  <!-- Label and input for postal_code start -->
+  <div class="form-group">
+    <label for="postal_code">
+      Postal code
+    </label>
+
+    <!-- Input for postal_code start -->
+    <input type="text" id="postal_code" name="postal_code" class="form-control" value="<%= @address.postal_code %>">
+    <!-- Input for postal_code end -->
+  </div>
+  <!-- Label and input for postal_code end -->
+
+  <!-- Label and input for state start -->
+  <div class="form-group">
+    <label for="state">
+      State
+    </label>
+
+    <!-- Input for state start -->
+    <input type="text" id="state" name="state" class="form-control" value="<%= @address.state %>">
+    <!-- Input for state end -->
+  </div>
+  <!-- Label and input for state end -->
+
+  <!-- Label and input for country start -->
+  <div class="form-group">
+    <label for="country">
+      Country
+    </label>
+
+    <!-- Input for country start -->
+    <input type="text" id="country" name="country" class="form-control" value="<%= @address.country %>">
+    <!-- Input for country end -->
+  </div>
+  <!-- Label and input for country end -->
+
+  <button class="btn btn-block btn-outline-secondary">
+    Update address
+  </button>
+</form>
+
+<hr>
+
+<a href="/addresses">
+  Go back
+</a>
