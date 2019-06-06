@@ -4,6 +4,8 @@ RSpec.describe StudyLocationDetail, type: :model do
   
     describe "Direct Associations" do
 
+    it { should have_many(:favorites) }
+
     it { should belong_to(:user) }
 
     end
