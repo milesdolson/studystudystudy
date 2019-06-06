@@ -13,17 +13,21 @@
 
       <!-- Edit link study_location_detail start -->
       <div class="col">
-        <a href="/study_location_details/<%= @study_location_detail.id %>/edit" class="btn btn-block btn-outline-secondary">
-          Edit study location detail
-        </a>
+        <% if current_user == @study_location_detail.user %>
+          <a href="/study_location_details/<%= @study_location_detail.id %>/edit" class="btn btn-block btn-sm btn-outline-secondary">
+            Edit study_location_detail
+          </a>
+        <% end %>
       </div>
       <!-- Edit link study_location_detail end -->
 
       <!-- Delete link study_location_detail start -->
       <div class="col">
-        <a href="/delete_study_location_detail/<%= @study_location_detail.id %>" class="btn btn-block btn-outline-secondary">
-          Delete study location detail
-        </a>
+        <% if current_user == @study_location_detail.user %>
+          <a href="/delete_study_location_detail/<%= @study_location_detail.id %>" class="btn btn-block btn-sm btn-outline-secondary">
+            Delete study_location_detail
+          </a>
+        <% end %>
       </div>
       <!-- Delete link study_location_detail end -->
     </div>

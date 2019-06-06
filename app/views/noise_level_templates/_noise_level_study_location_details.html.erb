@@ -17,9 +17,11 @@
         <!-- Show link end -->
 
         <!-- Delete link start -->
-        <a href="/delete_study_location_detail_from_noise_level/<%= study_location_detail.id %>">
-          Delete
-        </a>
+        <%if current_user == study_location_detail.user %>
+          <a href="/delete_study_location_detail_from_noise_level/<%= study_location_detail.id %>">
+            Delete
+          </a>
+        <% end %>
         <!-- Delete link end -->
 
       </li>
