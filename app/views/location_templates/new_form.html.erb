@@ -28,7 +28,7 @@
     </label>
 
     <!-- Input for address_id start -->
-    <input type="text" id="address_id" name="address_id" class="form-control">
+    <%= select_tag(:address_id, options_from_collection_for_select(Address.all, :id, :street_number, @location.address_id), :class => "form-control") %>
     <!-- Input for address_id end -->
   </div>
   <!-- Label and input for address_id end -->
