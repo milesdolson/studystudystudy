@@ -1,0 +1,41 @@
+<!-- Validation failure messages -->
+<% if @noise_level.errors.any? %>
+  <% @noise_level.errors.full_messages.each do |message| %>
+    <div class="alert">
+      <%= message %>
+    </div>
+  <% end %>
+<% end %>
+
+<h1>
+  Edit noise level #<%= @noise_level.id %>
+</h1>
+
+<hr>
+
+<!-- Form noise_level start -->
+<form action="/update_noise_level/<%= @noise_level.id %>" method="post">
+<!-- Form noise_level end -->
+
+  <!-- Label and input for level start -->
+  <div class="form-group">
+    <label for="level">
+      Level
+    </label>
+
+    <!-- Input for level start -->
+    <input type="text" id="level" name="level" class="form-control" value="<%= @noise_level.level %>">
+    <!-- Input for level end -->
+  </div>
+  <!-- Label and input for level end -->
+
+  <button class="btn btn-block btn-outline-secondary">
+    Update noise level
+  </button>
+</form>
+
+<hr>
+
+<a href="/noise_levels">
+  Go back
+</a>

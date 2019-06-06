@@ -1,0 +1,82 @@
+<div class="row mb-3">
+  <div class="col-md-12">
+    <h1>
+      All noise levels
+    </h1>
+
+    <a href="/noise_levels/new" class="btn btn-block btn-outline-secondary">
+      Add a new noise level
+    </a>
+  </div>
+</div>
+
+<!-- Ransack Code start -->
+
+<!-- Ransack Code end -->
+
+<!-- Location Map Code start -->
+
+<!-- Location Map Code end -->
+
+<hr>
+
+<div class="row mb-3">
+  <div class="col-md-12">
+    <table class="table">
+      <tr>
+        <th>
+          ID
+        </th>
+
+        <th>
+          Level
+        </th>
+
+        <th>
+          Created at
+        </th>
+
+        <th>
+          Updated at
+        </th>
+
+        <th>
+        </th>
+      </tr>
+
+      <% @noise_levels.each do |noise_level| %>
+      <tr>
+        <!-- Display noise_level.id start -->
+        <td>
+          <%= noise_level.id %>
+        </td>
+        <!-- Display noise_level.id end -->
+
+        <!-- Display noise_level.level start -->
+        <td>
+          <%= noise_level.level %>
+        </td>
+        <!-- Display noise_level.level end -->
+
+        <!-- Display noise_level.created_at start -->
+        <td>
+          <%= time_ago_in_words(noise_level.created_at) %> ago
+        </td>
+        <!-- Display noise_level.created_at end -->
+
+        <!-- Display noise_level.updated_at start -->
+        <td>
+          <%= time_ago_in_words(noise_level.updated_at) %> ago
+        </td>
+        <!-- Display noise_level.updated_at end -->
+
+        <td>
+          <a href="/noise_levels/<%= noise_level.id %>">
+            Show details
+          </a>
+        </td>
+      </tr>
+      <% end %>
+    </table>
+  </div>
+</div>

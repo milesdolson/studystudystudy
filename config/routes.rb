@@ -1,4 +1,23 @@
 Rails.application.routes.draw do
+  # Routes for the Noise level resource:
+
+  # CREATE
+  get("/noise_levels/new", { :controller => "noise_levels", :action => "new_form" })
+  post("/create_noise_level", { :controller => "noise_levels", :action => "create_row" })
+
+  # READ
+  get("/noise_levels", { :controller => "noise_levels", :action => "index" })
+  get("/noise_levels/:id_to_display", { :controller => "noise_levels", :action => "show" })
+
+  # UPDATE
+  get("/noise_levels/:prefill_with_id/edit", { :controller => "noise_levels", :action => "edit_form" })
+  post("/update_noise_level/:id_to_modify", { :controller => "noise_levels", :action => "update_row" })
+
+  # DELETE
+  get("/delete_noise_level/:id_to_remove", { :controller => "noise_levels", :action => "destroy_row" })
+
+  #------------------------------
+
   # Routes for the Ambience resource:
 
   # CREATE
