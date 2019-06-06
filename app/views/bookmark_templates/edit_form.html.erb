@@ -15,7 +15,7 @@
     </label>
 
     <!-- Input for study_location_id start -->
-    <input type="text" id="study_location_id" name="study_location_id" class="form-control" value="<%= @bookmark.study_location_id %>">
+    <%= select_tag(:study_location_id, options_from_collection_for_select(StudyLocationDetail.all, :id, :created_at, @bookmark.study_location_id), :class => "form-control") %>
     <!-- Input for study_location_id end -->
   </div>
   <!-- Label and input for study_location_id end -->
