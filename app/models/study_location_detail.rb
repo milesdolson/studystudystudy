@@ -1,6 +1,8 @@
 class StudyLocationDetail < ApplicationRecord
   # Direct associations
 
+  belongs_to :noise_level
+
   belongs_to :ambience
 
   belongs_to :location
