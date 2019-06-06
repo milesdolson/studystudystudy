@@ -1,4 +1,6 @@
 ActiveAdmin.register Bookmark do
+
+ permit_params :study_location_id, :category_id
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
