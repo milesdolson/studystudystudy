@@ -1,4 +1,23 @@
 Rails.application.routes.draw do
+  # Routes for the Internet quality resource:
+
+  # CREATE
+  get("/internet_qualities/new", { :controller => "internet_qualities", :action => "new_form" })
+  post("/create_internet_quality", { :controller => "internet_qualities", :action => "create_row" })
+
+  # READ
+  get("/internet_qualities", { :controller => "internet_qualities", :action => "index" })
+  get("/internet_qualities/:id_to_display", { :controller => "internet_qualities", :action => "show" })
+
+  # UPDATE
+  get("/internet_qualities/:prefill_with_id/edit", { :controller => "internet_qualities", :action => "edit_form" })
+  post("/update_internet_quality/:id_to_modify", { :controller => "internet_qualities", :action => "update_row" })
+
+  # DELETE
+  get("/delete_internet_quality/:id_to_remove", { :controller => "internet_qualities", :action => "destroy_row" })
+
+  #------------------------------
+
   # Routes for the Noise level resource:
 
   # CREATE
