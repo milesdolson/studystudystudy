@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root :to => "study_location_details#index"
   # Routes for the Category resource:
 
   # CREATE
