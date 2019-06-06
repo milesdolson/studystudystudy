@@ -10,28 +10,22 @@
   <ul class="list-group list-group-flush">
     <% @internet_quality.study_location_details.each do |study_location_detail| %>
       <li class="list-group-item d-flex align-items-center justify-content-between">
-        <!-- Show link start -->
         <a href="/study_location_details/<%= study_location_detail.id %>">
           <%= study_location_detail.created_at %>
         </a>
-        <!-- Show link end -->
 
-        <!-- Delete link start -->
         <%if current_user == study_location_detail.user %>
           <a href="/delete_study_location_detail_from_internet_quality/<%= study_location_detail.id %>">
             Delete
           </a>
         <% end %>
-        <!-- Delete link end -->
 
       </li>
     <% end %>
 
     <div class="card-footer">
       <div class="collapse" id="internet_quality_study_location_details_new_form">
-        <!-- New associationcollection form start -->
         <%= render partial: "internet_quality_templates/internet_quality_study_location_details_new_form" %>
-        <!-- New associationcollection form end -->
       </div>
     </div>
 

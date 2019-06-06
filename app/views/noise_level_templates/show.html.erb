@@ -11,58 +11,46 @@
         </a>
       </div>
 
-      <!-- Edit link noise_level start -->
       <div class="col">
         <a href="/noise_levels/<%= @noise_level.id %>/edit" class="btn btn-block btn-outline-secondary">
           Edit noise level
         </a>
       </div>
-      <!-- Edit link noise_level end -->
 
-      <!-- Delete link noise_level start -->
       <div class="col">
         <a href="/delete_noise_level/<%= @noise_level.id %>" class="btn btn-block btn-outline-secondary">
           Delete noise level
         </a>
       </div>
-      <!-- Delete link noise_level end -->
     </div>
 
     <dl>
       <dt>
         Level
       </dt>
-      <!-- Display level start -->
       <dd>
         <%= @noise_level.level %>
       </dd>
-      <!-- Display level end -->
 
       <dt>
         Created at
       </dt>
-      <!-- Display created_at start -->
       <dd>
         <%= time_ago_in_words(@noise_level.created_at) %> ago
       </dd>
-      <!-- Display created_at end -->
 
       <dt>
         Updated at
       </dt>
-      <!-- Display updated_at start -->
       <dd>
         <%= time_ago_in_words(@noise_level.updated_at) %> ago
       </dd>
-      <!-- Display updated_at end -->
     </dl>
   </div>
 </div>
 
-<!-- Show Page Customization starts -->
 <div class="row mb-3">
   <div class="col-md-8 offset-md-2">
     <%= render partial: "noise_level_templates/noise_level_study_location_details" %>
   </div>
 </div>
-<!-- Show Page Customization end -->

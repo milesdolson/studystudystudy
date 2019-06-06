@@ -11,28 +11,23 @@
         </a>
       </div>
 
-      <!-- Edit link bookmark start -->
       <div class="col">
         <a href="/bookmarks/<%= @bookmark.id %>/edit" class="btn btn-block btn-outline-secondary">
           Edit bookmark
         </a>
       </div>
-      <!-- Edit link bookmark end -->
 
-      <!-- Delete link bookmark start -->
       <div class="col">
         <a href="/delete_bookmark/<%= @bookmark.id %>" class="btn btn-block btn-outline-secondary">
           Delete bookmark
         </a>
       </div>
-      <!-- Delete link bookmark end -->
     </div>
 
     <dl>
       <dt>
         Study location
       </dt>
-      <!-- Display study_location_id start -->
       <dd>
         <% if @bookmark.study_location.present? %>
           <a href="/study_location_details/<%= @bookmark.study_location_id %>">
@@ -40,12 +35,10 @@
           </a>
         <% end %>
       </dd>
-      <!-- Display study_location_id end -->
 
       <dt>
         Category
       </dt>
-      <!-- Display category_id start -->
       <dd>
         <% if @bookmark.category.present? %>
           <a href="/categories/<%= @bookmark.category_id %>">
@@ -53,28 +46,21 @@
           </a>
         <% end %>
       </dd>
-      <!-- Display category_id end -->
 
       <dt>
         Created at
       </dt>
-      <!-- Display created_at start -->
       <dd>
         <%= time_ago_in_words(@bookmark.created_at) %> ago
       </dd>
-      <!-- Display created_at end -->
 
       <dt>
         Updated at
       </dt>
-      <!-- Display updated_at start -->
       <dd>
         <%= time_ago_in_words(@bookmark.updated_at) %> ago
       </dd>
-      <!-- Display updated_at end -->
     </dl>
   </div>
 </div>
 
-<!-- Show Page Customization starts -->
-<!-- Show Page Customization end -->

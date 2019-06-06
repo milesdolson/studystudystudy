@@ -10,17 +10,13 @@
   </div>
 </div>
 
-<!-- Ransack Code start -->
 <div class="row">
   <div class="col-md-12 mb-3">
     <%= render partial: "bookmark_templates/bookmarks_search_form" %>
   </div>
 </div>
-<!-- Ransack Code end -->
 
-<!-- Location Map Code start -->
 
-<!-- Location Map Code end -->
 
 <hr>
 
@@ -54,13 +50,10 @@
 
       <% @bookmarks.each do |bookmark| %>
       <tr>
-        <!-- Display bookmark.id start -->
         <td>
           <%= bookmark.id %>
         </td>
-        <!-- Display bookmark.id end -->
 
-        <!-- Display bookmark.study_location_id start -->
         <td>
           <% if bookmark.study_location.present? %>
             <a href="/study_location_details/<%= bookmark.study_location.id %>">
@@ -68,9 +61,7 @@
             </a>
           <% end %>
         </td>
-        <!-- Display bookmark.study_location_id end -->
 
-        <!-- Display bookmark.category_id start -->
         <td>
           <% if bookmark.category.present? %>
             <a href="/categories/<%= bookmark.category.id %>">
@@ -78,19 +69,14 @@
             </a>
           <% end %>
         </td>
-        <!-- Display bookmark.category_id end -->
 
-        <!-- Display bookmark.created_at start -->
         <td>
           <%= time_ago_in_words(bookmark.created_at) %> ago
         </td>
-        <!-- Display bookmark.created_at end -->
 
-        <!-- Display bookmark.updated_at start -->
         <td>
           <%= time_ago_in_words(bookmark.updated_at) %> ago
         </td>
-        <!-- Display bookmark.updated_at end -->
 
         <td>
           <a href="/bookmarks/<%= bookmark.id %>">

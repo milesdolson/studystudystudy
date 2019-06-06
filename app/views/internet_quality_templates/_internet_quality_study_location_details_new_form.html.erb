@@ -1,65 +1,40 @@
-<!-- Form study_location_detail start -->
 <form action="/create_study_location_detail_from_internet_quality" method="post">
-<!-- Form study_location_detail end -->
 
-  <!-- Label and input for ambience_id start -->
   <div class="form-group">
     <label for="ambience_id">
       Ambience
     </label>
 
-    <!-- Input for ambience_id start -->
     <%= select_tag(:ambience_id, options_from_collection_for_select(Ambience.all, :id, :description, @study_location_detail.ambience_id), :class => "form-control") %>
-    <!-- Input for ambience_id end -->
   </div>
-  <!-- Label and input for ambience_id end -->
 
-  <!-- Label and input for noise_level_id start -->
   <div class="form-group">
     <label for="noise_level_id">
       Noise level
     </label>
 
-    <!-- Input for noise_level_id start -->
     <%= select_tag(:noise_level_id, options_from_collection_for_select(NoiseLevel.all, :id, :level, @study_location_detail.noise_level_id), :class => "form-control") %>
-    <!-- Input for noise_level_id end -->
   </div>
-  <!-- Label and input for noise_level_id end -->
 
-  <!-- Label and input for internet_quality_id start -->
-  <!-- Input for internet_quality_id start -->
   <input type="hidden" name="internet_quality_id" value="<%= @internet_quality.id %>">
-  <!-- Input for internet_quality_id end -->
 
-  <!-- Label and input for plug_availability_id start -->
   <div class="form-group">
     <label for="plug_availability_id">
       Plug availability
     </label>
 
-    <!-- Input for plug_availability_id start -->
     <%= select_tag(:plug_availability_id, options_from_collection_for_select(PlugAvailability.all, :id, :availability, @study_location_detail.plug_availability_id), :class => "form-control") %>
-    <!-- Input for plug_availability_id end -->
   </div>
-  <!-- Label and input for plug_availability_id end -->
 
-  <!-- Label and input for location_id start -->
   <div class="form-group">
     <label for="location_id">
       Location
     </label>
 
-    <!-- Input for location_id start -->
     <%= select_tag(:location_id, options_from_collection_for_select(Location.all, :id, :name, @study_location_detail.location_id), :class => "form-control") %>
-    <!-- Input for location_id end -->
   </div>
-  <!-- Label and input for location_id end -->
 
-  <!-- Label and input for user_id start -->
-  <!-- Input for "user_id" start -->
   <input type="hidden" name="user_id" value="<%= current_user.id %>">
-  <!-- Input for "user_id" end -->
-  <!-- Label and input for user_id end -->
 
   <button class="btn btn-block btn-outline-secondary">
     Create study location detail

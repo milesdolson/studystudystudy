@@ -10,26 +10,20 @@
   <ul class="list-group list-group-flush">
     <% @address.locations.each do |location| %>
       <li class="list-group-item d-flex align-items-center justify-content-between">
-        <!-- Show link start -->
         <a href="/locations/<%= location.id %>">
           <%= location.name %>
         </a>
-        <!-- Show link end -->
 
-        <!-- Delete link start -->
         <a href="/delete_location_from_address/<%= location.id %>">
           Delete
         </a>
-        <!-- Delete link end -->
 
       </li>
     <% end %>
 
     <div class="card-footer">
       <div class="collapse" id="address_locations_new_form">
-        <!-- New associationcollection form start -->
         <%= render partial: "address_templates/address_locations_new_form" %>
-        <!-- New associationcollection form end -->
       </div>
     </div>
 

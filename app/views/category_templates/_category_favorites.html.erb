@@ -10,26 +10,20 @@
   <ul class="list-group list-group-flush">
     <% @category.favorites.each do |bookmark| %>
       <li class="list-group-item d-flex align-items-center justify-content-between">
-        <!-- Show link start -->
         <a href="/bookmarks/<%= bookmark.id %>">
           <%= bookmark.study_location_id %>
         </a>
-        <!-- Show link end -->
 
-        <!-- Delete link start -->
         <a href="/delete_bookmark_from_category/<%= bookmark.id %>">
           Delete
         </a>
-        <!-- Delete link end -->
 
       </li>
     <% end %>
 
     <div class="card-footer">
       <div class="collapse" id="category_favorites_new_form">
-        <!-- New associationcollection form start -->
         <%= render partial: "category_templates/category_favorites_new_form" %>
-        <!-- New associationcollection form end -->
       </div>
     </div>
 

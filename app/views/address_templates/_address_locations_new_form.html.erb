@@ -1,23 +1,14 @@
-<!-- Form location start -->
 <form action="/create_location_from_address" method="post">
-<!-- Form location end -->
 
-  <!-- Label and input for name start -->
   <div class="form-group">
     <label for="name">
       Name
     </label>
 
-    <!-- Input for name start -->
     <input type="text" id="name" name="name" class="form-control" value="<%= @location.name %>">
-    <!-- Input for name end -->
   </div>
-  <!-- Label and input for name end -->
 
-  <!-- Label and input for address_id start -->
-  <!-- Input for address_id start -->
   <input type="hidden" name="address_id" value="<%= @address.id %>">
-  <!-- Input for address_id end -->
 
   <button class="btn btn-block btn-outline-secondary">
     Create location

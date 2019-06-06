@@ -11,103 +11,81 @@
         </a>
       </div>
 
-      <!-- Edit link address start -->
       <div class="col">
         <a href="/addresses/<%= @address.id %>/edit" class="btn btn-block btn-outline-secondary">
           Edit address
         </a>
       </div>
-      <!-- Edit link address end -->
 
-      <!-- Delete link address start -->
       <div class="col">
         <a href="/delete_address/<%= @address.id %>" class="btn btn-block btn-outline-secondary">
           Delete address
         </a>
       </div>
-      <!-- Delete link address end -->
     </div>
 
     <dl>
       <dt>
         Street number
       </dt>
-      <!-- Display street_number start -->
       <dd>
         <%= @address.street_number %>
       </dd>
-      <!-- Display street_number end -->
 
       <dt>
         Street
       </dt>
-      <!-- Display street start -->
       <dd>
         <%= @address.street %>
       </dd>
-      <!-- Display street end -->
 
       <dt>
         City
       </dt>
-      <!-- Display city start -->
       <dd>
         <%= @address.city %>
       </dd>
-      <!-- Display city end -->
 
       <dt>
         Postal code
       </dt>
-      <!-- Display postal_code start -->
       <dd>
         <%= @address.postal_code %>
       </dd>
-      <!-- Display postal_code end -->
 
       <dt>
         State
       </dt>
-      <!-- Display state start -->
       <dd>
         <%= @address.state %>
       </dd>
-      <!-- Display state end -->
 
       <dt>
         Country
       </dt>
-      <!-- Display country start -->
       <dd>
         <%= @address.country %>
       </dd>
-      <!-- Display country end -->
 
       <dt>
         Created at
       </dt>
-      <!-- Display created_at start -->
       <dd>
         <%= time_ago_in_words(@address.created_at) %> ago
       </dd>
-      <!-- Display created_at end -->
 
       <dt>
         Updated at
       </dt>
-      <!-- Display updated_at start -->
       <dd>
         <%= time_ago_in_words(@address.updated_at) %> ago
       </dd>
-      <!-- Display updated_at end -->
     </dl>
   </div>
 </div>
 
-<!-- Show Page Customization starts -->
 <div class="row mb-3">
   <div class="col-md-8 offset-md-2">
     <%= render partial: "address_templates/address_locations" %>
   </div>
 </div>
-<!-- Show Page Customization end -->

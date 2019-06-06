@@ -11,58 +11,46 @@
         </a>
       </div>
 
-      <!-- Edit link ambience start -->
       <div class="col">
         <a href="/ambiences/<%= @ambience.id %>/edit" class="btn btn-block btn-outline-secondary">
           Edit ambience
         </a>
       </div>
-      <!-- Edit link ambience end -->
 
-      <!-- Delete link ambience start -->
       <div class="col">
         <a href="/delete_ambience/<%= @ambience.id %>" class="btn btn-block btn-outline-secondary">
           Delete ambience
         </a>
       </div>
-      <!-- Delete link ambience end -->
     </div>
 
     <dl>
       <dt>
         Description
       </dt>
-      <!-- Display description start -->
       <dd>
         <%= @ambience.description %>
       </dd>
-      <!-- Display description end -->
 
       <dt>
         Created at
       </dt>
-      <!-- Display created_at start -->
       <dd>
         <%= time_ago_in_words(@ambience.created_at) %> ago
       </dd>
-      <!-- Display created_at end -->
 
       <dt>
         Updated at
       </dt>
-      <!-- Display updated_at start -->
       <dd>
         <%= time_ago_in_words(@ambience.updated_at) %> ago
       </dd>
-      <!-- Display updated_at end -->
     </dl>
   </div>
 </div>
 
-<!-- Show Page Customization starts -->
 <div class="row mb-3">
   <div class="col-md-8 offset-md-2">
     <%= render partial: "ambience_templates/ambience_study_location_details" %>
   </div>
 </div>
-<!-- Show Page Customization end -->

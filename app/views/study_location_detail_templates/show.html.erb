@@ -11,7 +11,6 @@
         </a>
       </div>
 
-      <!-- Edit link study_location_detail start -->
       <div class="col">
         <% if current_user == @study_location_detail.user %>
           <a href="/study_location_details/<%= @study_location_detail.id %>/edit" class="btn btn-block btn-sm btn-outline-secondary">
@@ -19,9 +18,7 @@
           </a>
         <% end %>
       </div>
-      <!-- Edit link study_location_detail end -->
 
-      <!-- Delete link study_location_detail start -->
       <div class="col">
         <% if current_user == @study_location_detail.user %>
           <a href="/delete_study_location_detail/<%= @study_location_detail.id %>" class="btn btn-block btn-sm btn-outline-secondary">
@@ -29,14 +26,12 @@
           </a>
         <% end %>
       </div>
-      <!-- Delete link study_location_detail end -->
     </div>
 
     <dl>
       <dt>
         Ambience
       </dt>
-      <!-- Display ambience_id start -->
       <dd>
         <% if @study_location_detail.ambience.present? %>
           <a href="/ambiences/<%= @study_location_detail.ambience_id %>">
@@ -44,12 +39,10 @@
           </a>
         <% end %>
       </dd>
-      <!-- Display ambience_id end -->
 
       <dt>
         Noise level
       </dt>
-      <!-- Display noise_level_id start -->
       <dd>
         <% if @study_location_detail.noise_level.present? %>
           <a href="/noise_levels/<%= @study_location_detail.noise_level_id %>">
@@ -57,12 +50,10 @@
           </a>
         <% end %>
       </dd>
-      <!-- Display noise_level_id end -->
 
       <dt>
         Internet quality
       </dt>
-      <!-- Display internet_quality_id start -->
       <dd>
         <% if @study_location_detail.internet_quality.present? %>
           <a href="/internet_qualities/<%= @study_location_detail.internet_quality_id %>">
@@ -70,12 +61,10 @@
           </a>
         <% end %>
       </dd>
-      <!-- Display internet_quality_id end -->
 
       <dt>
         Plug availability
       </dt>
-      <!-- Display plug_availability_id start -->
       <dd>
         <% if @study_location_detail.plug_availability.present? %>
           <a href="/plug_availabilities/<%= @study_location_detail.plug_availability_id %>">
@@ -83,12 +72,10 @@
           </a>
         <% end %>
       </dd>
-      <!-- Display plug_availability_id end -->
 
       <dt>
         Location
       </dt>
-      <!-- Display location_id start -->
       <dd>
         <% if @study_location_detail.location.present? %>
           <a href="/locations/<%= @study_location_detail.location_id %>">
@@ -96,12 +83,10 @@
           </a>
         <% end %>
       </dd>
-      <!-- Display location_id end -->
 
       <dt>
         User
       </dt>
-      <!-- Display user_id start -->
       <dd>
         <% if @study_location_detail.user.present? %>
           <a href="/users/<%= @study_location_detail.user_id %>">
@@ -109,33 +94,26 @@
           </a>
         <% end %>
       </dd>
-      <!-- Display user_id end -->
 
       <dt>
         Created at
       </dt>
-      <!-- Display created_at start -->
       <dd>
         <%= time_ago_in_words(@study_location_detail.created_at) %> ago
       </dd>
-      <!-- Display created_at end -->
 
       <dt>
         Updated at
       </dt>
-      <!-- Display updated_at start -->
       <dd>
         <%= time_ago_in_words(@study_location_detail.updated_at) %> ago
       </dd>
-      <!-- Display updated_at end -->
     </dl>
   </div>
 </div>
 
-<!-- Show Page Customization starts -->
 <div class="row mb-3">
   <div class="col-md-8 offset-md-2">
     <%= render partial: "study_location_detail_templates/study_location_detail_favorites" %>
   </div>
 </div>
-<!-- Show Page Customization end -->

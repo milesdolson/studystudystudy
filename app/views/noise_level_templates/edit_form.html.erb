@@ -4,21 +4,15 @@
 
 <hr>
 
-<!-- Form noise_level start -->
 <form action="/update_noise_level/<%= @noise_level.id %>" method="post">
-<!-- Form noise_level end -->
 
-  <!-- Label and input for level start -->
   <div class="form-group">
     <label for="level">
       Level
     </label>
 
-    <!-- Input for level start -->
     <input type="text" id="level" name="level" class="form-control" value="<%= @noise_level.level %>">
-    <!-- Input for level end -->
   </div>
-  <!-- Label and input for level end -->
 
   <button class="btn btn-block btn-outline-secondary">
     Update noise level
