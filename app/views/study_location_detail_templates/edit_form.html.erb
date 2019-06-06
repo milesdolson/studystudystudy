@@ -15,7 +15,7 @@
     </label>
 
     <!-- Input for ambience_id start -->
-    <input type="text" id="ambience_id" name="ambience_id" class="form-control" value="<%= @study_location_detail.ambience_id %>">
+    <%= select_tag(:ambience_id, options_from_collection_for_select(Ambience.all, :id, :description, @study_location_detail.ambience_id), :class => "form-control") %>
     <!-- Input for ambience_id end -->
   </div>
   <!-- Label and input for ambience_id end -->
