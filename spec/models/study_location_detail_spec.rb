@@ -4,6 +4,8 @@ RSpec.describe StudyLocationDetail, type: :model do
   
     describe "Direct Associations" do
 
+    it { should belong_to(:plug_availability) }
+
     it { should belong_to(:internet_quality) }
 
     it { should belong_to(:noise_level) }

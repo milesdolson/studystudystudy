@@ -1,6 +1,8 @@
 class StudyLocationDetail < ApplicationRecord
   # Direct associations
 
+  belongs_to :plug_availability
+
   belongs_to :internet_quality
 
   belongs_to :noise_level
