@@ -1,6 +1,8 @@
 class StudyLocationDetail < ApplicationRecord
   # Direct associations
 
+  belongs_to :ambience
+
   belongs_to :location
 
   has_many   :favorites,
