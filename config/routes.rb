@@ -26,6 +26,8 @@ Rails.application.routes.draw do
   # CREATE
   get("/bookmarks/new", { :controller => "bookmarks", :action => "new_form" })
   post("/create_bookmark", { :controller => "bookmarks", :action => "create_row" })
+  post("/create_bookmark_from_category", { :controller => "bookmarks", :action => "create_row_from_category" })
+  post("/create_bookmark_from_study_location_detail", { :controller => "bookmarks", :action => "create_row_from_study_location_detail" })
 
   # READ
   get("/bookmarks", { :controller => "bookmarks", :action => "index" })
@@ -142,6 +144,7 @@ Rails.application.routes.draw do
   # CREATE
   get("/locations/new", { :controller => "locations", :action => "new_form" })
   post("/create_location", { :controller => "locations", :action => "create_row" })
+  post("/create_location_from_address", { :controller => "locations", :action => "create_row_from_address" })
 
   # READ
   get("/locations", { :controller => "locations", :action => "index" })
@@ -162,6 +165,11 @@ Rails.application.routes.draw do
   # CREATE
   get("/study_location_details/new", { :controller => "study_location_details", :action => "new_form" })
   post("/create_study_location_detail", { :controller => "study_location_details", :action => "create_row" })
+  post("/create_study_location_detail_from_plug_availability", { :controller => "study_location_details", :action => "create_row_from_plug_availability" })
+  post("/create_study_location_detail_from_internet_quality", { :controller => "study_location_details", :action => "create_row_from_internet_quality" })
+  post("/create_study_location_detail_from_noise_level", { :controller => "study_location_details", :action => "create_row_from_noise_level" })
+  post("/create_study_location_detail_from_ambience", { :controller => "study_location_details", :action => "create_row_from_ambience" })
+  post("/create_study_location_detail_from_location", { :controller => "study_location_details", :action => "create_row_from_location" })
 
   # READ
   get("/study_location_details", { :controller => "study_location_details", :action => "index" })

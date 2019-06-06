@@ -6,6 +6,7 @@ class NoiseLevelsController < ApplicationController
   end
 
   def show
+    @study_location_detail = StudyLocationDetail.new
     @noise_level = NoiseLevel.find(params.fetch("id_to_display"))
 
     render("noise_level_templates/show.html.erb")

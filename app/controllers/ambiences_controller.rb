@@ -6,6 +6,7 @@ class AmbiencesController < ApplicationController
   end
 
   def show
+    @study_location_detail = StudyLocationDetail.new
     @ambience = Ambience.find(params.fetch("id_to_display"))
 
     render("ambience_templates/show.html.erb")

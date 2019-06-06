@@ -6,6 +6,7 @@ class LocationsController < ApplicationController
   end
 
   def show
+    @study_location_detail = StudyLocationDetail.new
     @location = Location.find(params.fetch("id_to_display"))
 
     render("location_templates/show.html.erb")
@@ -27,6 +28,21 @@ class LocationsController < ApplicationController
       @location.save
 
       redirect_back(:fallback_location => "/locations", :notice => "Location created successfully.")
+    else
+      render("location_templates/new_form_with_errors.html.erb")
+    end
+  end
+
+  def create_row_from_address
+    @location = Location.new
+
+    @location.name = params.fetch("name")
+    @location.address_id = params.fetch("address_id")
+
+    if @location.valid?
+      @location.save
+
+      redirect_to("/addresses/#{@location.address_id}", notice: "Location created successfully.")
     else
       render("location_templates/new_form_with_errors.html.erb")
     end

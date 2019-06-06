@@ -6,6 +6,7 @@ class PlugAvailabilitiesController < ApplicationController
   end
 
   def show
+    @study_location_detail = StudyLocationDetail.new
     @plug_availability = PlugAvailability.find(params.fetch("id_to_display"))
 
     render("plug_availability_templates/show.html.erb")

@@ -1,0 +1,25 @@
+<!-- Form bookmark start -->
+<form action="/create_bookmark_from_category" method="post">
+<!-- Form bookmark end -->
+
+  <!-- Label and input for study_location_id start -->
+  <div class="form-group">
+    <label for="study_location_id">
+      Study location
+    </label>
+
+    <!-- Input for study_location_id start -->
+    <input type="text" id="study_location_id" name="study_location_id" class="form-control" value="<%= @bookmark.study_location_id %>">
+    <!-- Input for study_location_id end -->
+  </div>
+  <!-- Label and input for study_location_id end -->
+
+  <!-- Label and input for category_id start -->
+  <!-- Input for category_id start -->
+  <input type="hidden" name="category_id" value="<%= @category.id %>">
+  <!-- Input for category_id end -->
+
+  <button class="btn btn-block btn-outline-secondary">
+    Create bookmark
+  </button>
+</form>

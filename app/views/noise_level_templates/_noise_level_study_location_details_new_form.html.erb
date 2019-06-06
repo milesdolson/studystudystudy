@@ -1,0 +1,73 @@
+<!-- Form study_location_detail start -->
+<form action="/create_study_location_detail_from_noise_level" method="post">
+<!-- Form study_location_detail end -->
+
+  <!-- Label and input for ambience_id start -->
+  <div class="form-group">
+    <label for="ambience_id">
+      Ambience
+    </label>
+
+    <!-- Input for ambience_id start -->
+    <input type="text" id="ambience_id" name="ambience_id" class="form-control" value="<%= @study_location_detail.ambience_id %>">
+    <!-- Input for ambience_id end -->
+  </div>
+  <!-- Label and input for ambience_id end -->
+
+  <!-- Label and input for noise_level_id start -->
+  <!-- Input for noise_level_id start -->
+  <input type="hidden" name="noise_level_id" value="<%= @noise_level.id %>">
+  <!-- Input for noise_level_id end -->
+
+  <!-- Label and input for internet_quality_id start -->
+  <div class="form-group">
+    <label for="internet_quality_id">
+      Internet quality
+    </label>
+
+    <!-- Input for internet_quality_id start -->
+    <input type="text" id="internet_quality_id" name="internet_quality_id" class="form-control" value="<%= @study_location_detail.internet_quality_id %>">
+    <!-- Input for internet_quality_id end -->
+  </div>
+  <!-- Label and input for internet_quality_id end -->
+
+  <!-- Label and input for plug_availability_id start -->
+  <div class="form-group">
+    <label for="plug_availability_id">
+      Plug availability
+    </label>
+
+    <!-- Input for plug_availability_id start -->
+    <input type="text" id="plug_availability_id" name="plug_availability_id" class="form-control" value="<%= @study_location_detail.plug_availability_id %>">
+    <!-- Input for plug_availability_id end -->
+  </div>
+  <!-- Label and input for plug_availability_id end -->
+
+  <!-- Label and input for location_id start -->
+  <div class="form-group">
+    <label for="location_id">
+      Location
+    </label>
+
+    <!-- Input for location_id start -->
+    <input type="text" id="location_id" name="location_id" class="form-control" value="<%= @study_location_detail.location_id %>">
+    <!-- Input for location_id end -->
+  </div>
+  <!-- Label and input for location_id end -->
+
+  <!-- Label and input for user_id start -->
+  <div class="form-group">
+    <label for="user_id">
+      User
+    </label>
+
+    <!-- Input for user_id start -->
+    <input type="text" id="user_id" name="user_id" class="form-control" value="<%= @study_location_detail.user_id %>">
+    <!-- Input for user_id end -->
+  </div>
+  <!-- Label and input for user_id end -->
+
+  <button class="btn btn-block btn-outline-secondary">
+    Create study location detail
+  </button>
+</form>

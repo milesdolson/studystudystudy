@@ -6,6 +6,7 @@ class InternetQualitiesController < ApplicationController
   end
 
   def show
+    @study_location_detail = StudyLocationDetail.new
     @internet_quality = InternetQuality.find(params.fetch("id_to_display"))
 
     render("internet_quality_templates/show.html.erb")

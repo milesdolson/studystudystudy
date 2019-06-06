@@ -6,6 +6,7 @@ class AddressesController < ApplicationController
   end
 
   def show
+    @location = Location.new
     @address = Address.find(params.fetch("id_to_display"))
 
     render("address_templates/show.html.erb")
